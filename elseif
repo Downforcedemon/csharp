@@ -1,0 +1,23 @@
+Random random = new Random(); 
+int daysUnitExpiration = random.Next(12); 
+int discountPercentage = 0; 
+
+if (daysUnitExpiration == 0) {
+    Console.WriteLine("your subscription has expired"); 
+}
+else if (daysUnitExpiration == 1) {
+    Console.WriteLine("you sub expires within a day"); 
+}
+else if (daysUnitExpiration <= 5) { 
+    Console.WriteLine($"your sub expires in {daysUnitExpiration} days"); 
+    discountPercentage = 10; 
+}
+else if (daysUnitExpiration <= 10)
+{
+    Console.WriteLine("Your subscription will expire soon. Renew now!");
+}
+
+if (discountPercentage > 0)
+{
+    Console.WriteLine($"Renew now and save {discountPercentage}%.");
+}
