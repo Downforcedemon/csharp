@@ -1,0 +1,75 @@
+// int employeeLevel = 200; 
+// string employeeName = "John Smith"; 
+
+// string title = " "; 
+
+// switch (employeeLevel){
+//     case 100:
+//     case 200: 
+//          title = "Junior Associate";
+//          break; 
+//     case 300:
+//          title = "Senior Associate"; 
+//          break; 
+//     case 400:
+//          title = "Manager";
+//          break; 
+//     case 500: 
+//          title = "Senior Manager";
+//          break;
+//     default:
+//          title = "Associate";
+//          break;  
+// }
+// Console.WriteLine($"{employeeName}, {title}"); 
+
+string sku = "01-MN-L"; 
+
+string [] product = sku.Split('-');
+
+string type = ""; 
+string color = ""; 
+string size = ""; 
+
+switch (product[0]){
+    case "01":
+        type = "sweat shirt";
+        break;
+    case "02":
+        type = "t-shirt";
+        break;
+    case "03":
+        type = "Sweat pants";
+        break;
+    default:
+        type = "other";
+        break;
+}
+switch (product[1])
+{
+    case "BL":
+        color = "Black";
+        break;
+    case "MN":
+        color = "Maroon";
+        break;
+    default:
+        color = "White";
+        break;
+}
+switch (product[2]){
+    case "s":
+        size = "small";
+        break;
+    case "M":
+        size = "medium";
+        break;
+    case "L":
+        size = "large";
+        break;
+    default:
+        size = "one dize fits all";
+        break;
+}
+
+Console.WriteLine($"product:{size} {color} {type}");
